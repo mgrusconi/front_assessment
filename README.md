@@ -1,0 +1,1 @@
+# Altran Frontend Assessment

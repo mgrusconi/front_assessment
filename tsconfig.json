@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "module": "system",
+    "removeComments": true,
+    "outDir": "./public",
+    "target": "es5"
+  },
+    "include": [
+        "client/**/*"
+    ],
+    "exclude": [
+        "node_modules"
+    ]
+}
