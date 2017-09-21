@@ -17,8 +17,8 @@
       })
     </script>
     <script>
-      System.import('app.js?version=2').then(function() {
-        angular.bootstrap(document, ['myApp']);
+      System.import('app.js').then(function() {
+        angular.bootstrap(document, ['brastlewark']);
       });
 
     </script>
@@ -26,7 +26,7 @@
   <body>
     <div ui-view></div>
     <!-- We'll also add some navigation: -->
-    <a ui-sref="state1">State 1</a>
+    <a  href="#/detail/12">State 1</a>
     <a ui-sref="state2">State 2</a>
   </body>
 </html>

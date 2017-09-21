@@ -1,25 +1,28 @@
-System.register(["./resources/controllers/hello-world", "./resources/controllers/goodbye-world"], function (exports_1, context_1) {
+System.register(["./resources/controllers/goodbye-world", "./resources/controllers/getDataController", "./resources/services/getDataService"], function (exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
-    var hello_world_1, goodbye_world_1, myApp;
+    var goodbye_world_1, getDataController_1, getDataService_1, app;
     return {
         setters: [
-            function (hello_world_1_1) {
-                hello_world_1 = hello_world_1_1;
-            },
             function (goodbye_world_1_1) {
                 goodbye_world_1 = goodbye_world_1_1;
+            },
+            function (getDataController_1_1) {
+                getDataController_1 = getDataController_1_1;
+            },
+            function (getDataService_1_1) {
+                getDataService_1 = getDataService_1_1;
             }
         ],
         execute: function () {
-            myApp = angular.module('myApp', ['ui.router']);
-            myApp.config(function ($stateProvider, $urlRouterProvider) {
+            app = angular.module('brastlewark', ['ui.router']);
+            app.config(function ($stateProvider, $urlRouterProvider) {
                 $urlRouterProvider.otherwise("/state1");
                 $stateProvider
                     .state('state1', {
                     url: "/state1",
                     templateUrl: "partials/state1.html",
-                    controller: hello_world_1.HelloWorld
+                    controller: getDataController_1.GetDataController
                 })
                     .state('state2', {
                     url: "/state2",
@@ -27,6 +30,8 @@ System.register(["./resources/controllers/hello-world", "./resources/controllers
                     controller: goodbye_world_1.GoodbyeWorld
                 });
             });
+            app.controller("GetDataController", getDataController_1.GetDataController);
+            app.service("GetDataService", getDataService_1.GetDataService);
         }
     };
 });
