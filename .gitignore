@@ -4,6 +4,7 @@
 #build
 public/components
 public/resources
+public/app.js
 
 # Logs
 logs

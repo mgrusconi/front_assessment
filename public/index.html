@@ -2,31 +2,46 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Typescript Modules</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Altran FrontEnd Assessment</title>
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body>
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/#/">
+            Altran FrontEnd Assessment
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid">
+      >
+      <a  href="#/list">List</a>
+      <a ui-sref="state2">State 2</a>
+      <div ui-view></div
+    </div>
     
-    <!-- get angular -->
     <script type="text/javascript" src="components/angular/angular.js"></script>
     <script type="text/javascript" src="components/angular-ui-router/release/angular-ui-router.min.js"></script>
-    
-    <!-- get systemJS from somewhere -->
     <script src="http://code.angularjs.org/tools/system.js"></script>
     <script>
       System.config({
         baseURL: './',
         defaultJSExtensions: true
       })
-    </script>
-    <script>
       System.import('app.js').then(function() {
         angular.bootstrap(document, ['brastlewark']);
       });
-
     </script>
-  </head>
-  <body>
-    <div ui-view></div>
-    <!-- We'll also add some navigation: -->
-    <a  href="#/detail/12">State 1</a>
-    <a ui-sref="state2">State 2</a>
   </body>
 </html>
