@@ -1,3 +1,10 @@
+/**
+ * Servicio para obtener los datos de la API.
+ * Get API Data Service.
+ *
+ * @author Marcelo G. Rusconi <mgrusconi@gmail.com>
+ */
+
 /// <reference path="../../../typings/index.d.ts" />
 
 import {GnomeModel} from "../models/gnomeModel";

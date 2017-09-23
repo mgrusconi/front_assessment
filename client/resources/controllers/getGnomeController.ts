@@ -1,3 +1,10 @@
+/**
+ * Controlador encargado del perfil de Gnome.
+ * Gnome Profile Manager Controller.
+ * 
+ * @author Marcelo G. Rusconi <mgrusconi@gmail.com>
+ */
+
 import {GnomeModel} from "../models/gnomeModel";
 import {GetDataService} from "../services/getDataService";
 

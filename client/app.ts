@@ -8,24 +8,28 @@
 
 /// <reference path="../typings/index.d.ts" />
 
+// Imports - Controllers
 import {GetGnomeController} from "./resources/controllers/getGnomeController";
 import {GetDataController} from "./resources/controllers/getDataController";
 
+// Imports - Services
 import {GetDataService} from "./resources/services/getDataService";
 
+// Imports - Directives
 import {GnomeNameDirective} from "./resources/directives/gnomeNameDirective";
 import {GnomeImageDirective} from "./resources/directives/gnomeImageDirective";
 import {GnomeProfessionsDirective} from "./resources/directives/gnomeProfessionsDirective";
 import {GnomeDataDirective} from "./resources/directives/gnomeDataDirective";
 
-
+// Imports - Filters
 import {normalize} from "./resources/filters/normalize";
 
+// Init Module
 var app = angular.module('brastlewark', ['ui.router']);
 
+// Routers
 app.config(function($stateProvider, $urlRouterProvider) {
 
-  // Routers
   $urlRouterProvider.otherwise("/list");
   $stateProvider
       .state('list', {
@@ -53,17 +57,17 @@ app.config(function($stateProvider, $urlRouterProvider) {
       });
 });
 
-//controllers
+//Add - Controllers
 app.controller("GetDataController", GetDataController);
 
-//services
+//Add - Services
 app.service("GetDataService", GetDataService);
 
-//directive
+//Add - Directive
 app.directive("gnomeName", GnomeNameDirective.factory());
 app.directive("gnomeImage", GnomeImageDirective.factory());
 app.directive("gnomeProfessions", GnomeProfessionsDirective.factory());
 app.directive("gnomeData", GnomeDataDirective.factory());
 
-//filters
+//Add - Filters
 app.filter("normalize", normalize);

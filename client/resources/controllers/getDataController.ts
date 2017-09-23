@@ -1,10 +1,16 @@
+/**
+ * Controlador encargado del conjunto de datos.
+ * Dataset Manager Controller.
+ *
+ * @author Marcelo G. Rusconi <mgrusconi@gmail.com>
+ */
+
 import {GnomeModel} from "../models/gnomeModel";
 import {GetDataService} from "../services/getDataService";
 
 export class GetDataController {
     public static $inject = ["$scope", '$filter','$stateParams', "GetDataService"];
 
-    public title: string = 'lalala';
     public gnomeList: GnomeModel[];
     public gnomeTotal: number;
 

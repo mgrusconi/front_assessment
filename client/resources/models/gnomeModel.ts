@@ -1,3 +1,10 @@
+/**
+ * Modelo de dato del objeto Gnome.
+ * Gnome Object Data Model.
+ *
+ * @author Marcelo G. Rusconi <mgrusconi@gmail.com>
+ */
+
 export class GnomeModel{
     public id: number;
     public name: string;
