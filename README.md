@@ -29,6 +29,13 @@ The environment can be run in two different ways, with Docker or install necessa
 - [bower](https://bower.io/) (`npm install --global bower`)
 - [typings](https://www.npmjs.com/package/typings) (`npm install --global typings`)
 
+### Development
+
+1. Run `npm install` to install the server dependencies.
+2. Run `bower install` to install the server dependencies.
+3. Run `npm run start_dev` to run the server in development mode.
+4. Open the browser at http://localhost:8080/
+
 ## TypeScript Code
 
 The TypeScript code is located in the `client` folder and is automatically transpiler to ES5 into `public` folder.
