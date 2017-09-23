@@ -8,7 +8,7 @@
 
 /// <reference path="../typings/index.d.ts" />
 
-import {GoodbyeWorld} from "./resources/controllers/goodbye-world";
+import {GetGnomeController} from "./resources/controllers/getGnomeController";
 import {GetDataController} from "./resources/controllers/getDataController";
 
 import {GetDataService} from "./resources/services/getDataService";
@@ -16,6 +16,10 @@ import {GetDataService} from "./resources/services/getDataService";
 import {GnomeNameDirective} from "./resources/directives/gnomeNameDirective";
 import {GnomeImageDirective} from "./resources/directives/gnomeImageDirective";
 import {GnomeProfessionsDirective} from "./resources/directives/gnomeProfessionsDirective";
+import {GnomeDataDirective} from "./resources/directives/gnomeDataDirective";
+
+
+import {normalize} from "./resources/filters/normalize";
 
 var app = angular.module('brastlewark', ['ui.router']);
 
@@ -28,11 +32,24 @@ app.config(function($stateProvider, $urlRouterProvider) {
         url: "/list",
         templateUrl: "views/list.html",
         controller: GetDataController
+      }).state('filter', {
+        url: "/list/:prof",
+        templateUrl: "views/list.html",
+        controller: GetDataController
       })
-      .state('state2', {
-        url: "/state2",
-        templateUrl: "templates/state2.html",
-        controller: GoodbyeWorld
+      .state('gnomeById', {
+        url: "/gnome/id/:id",
+        templateUrl: "views/gnome.html",
+        controller: GetGnomeController
+      })
+      .state('gnomeByName', {
+        url: "/gnome/name/:name",
+        templateUrl: "views/gnome.html",
+        controller: GetGnomeController
+      })
+      .state('notFound', {
+        url: "/not_found",
+        templateUrl: "views/not-found.html",
       });
 });
 
@@ -46,3 +63,7 @@ app.service("GetDataService", GetDataService);
 app.directive("gnomeName", GnomeNameDirective.factory());
 app.directive("gnomeImage", GnomeImageDirective.factory());
 app.directive("gnomeProfessions", GnomeProfessionsDirective.factory());
+app.directive("gnomeData", GnomeDataDirective.factory());
+
+//filters
+app.filter("normalize", normalize);
