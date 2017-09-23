@@ -1,6 +1,5 @@
 #!/bin/sh
 
-npm i -g gulp
 npm i -g watch-http-server
 npm i -g bower
 npm i -g typings
