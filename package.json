@@ -5,7 +5,7 @@
   "scripts": {
     "transpiler": "tsc -w",
     "server:up": "watch-http-server -p 8080 -c-1",
-    "test": "",
+    "test": "karma start karma.conf.js",
     "start_dev": "npm run transpiler & npm run server:up"
   },
   "author": "Marcelo Rusconi",
