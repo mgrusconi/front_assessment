@@ -2,18 +2,31 @@ module.exports = function (config) {
     config.set({
         basePath: './',
         files: [
+            'node_modules/es6-promise/dist/es6-promise.js',
             'public/components/angular/angular.js',
             'public/resources/**/*.js',
             'tests/**/*.js'
         ],
         autoWatch: false,
         frameworks: ['systemjs', 'jasmine'],
-        browsers: ['PhantomJS'],
+        browsers: ['Firefox'],
         singleRun: true,
         plugins: [
             'karma-systemjs',
-            'karma-phantomjs-launcher',
+            'karma-firefox-launcher',
             'karma-jasmine'
+        ],
+        systemjs: {
+            configFile: 'system.conf.js',
+            config: {
+                transpiler: null,
+                paths: {
+                    'systemjs': 'node_modules/systemjs/dist/system.js',
+                }                
+            }
+        },
+        serveFiles: [
+            'public/**/*.js'
         ]
     });
 };
