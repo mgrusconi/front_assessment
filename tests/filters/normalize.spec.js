@@ -1,13 +1,13 @@
 'use strict';
 
-describe('Modulo brastlewark.decorator-filter', function () {
+describe('Module brastlewark.normalize', function () {
     
     beforeEach(function(){
-        module('brastlewark.normalize');
+        module('brastlewark.normalize-filter');
     });
 
-    describe('Filtro decorator', function () {
-        it('debe transformar en mayusculas cualquier string y anteponer asteriscos', 
+    describe('Normalize filter', function () {
+        it('Must return a string with no spaces and lowercase', 
         	inject(function (normalize) {
             var input = 'someThing';
             var expectedOutput = 'something';
