@@ -2,8 +2,9 @@ module.exports = function (config) {
     config.set({
         basePath: './',
         files: [
-            'node_modules/es6-promise/dist/es6-promise.js',
             'public/components/angular/angular.js',
+            'public/components/angular-mocks/angular-mocks.js',
+            'node_modules/es6-promise/dist/es6-promise.js',
             'public/resources/**/*.js',
             'tests/**/*.js'
         ],
